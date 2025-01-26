@@ -1,6 +1,3 @@
-### **README.md**
-
-```markdown
 # Document Management System
 
 ## Overview
