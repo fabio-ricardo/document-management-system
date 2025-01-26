@@ -1,4 +1,6 @@
+### **README.md**
 
+```markdown
 # Document Management System
 
 ## Overview
@@ -9,22 +11,24 @@ This project is a lightweight document management system that allows users to up
 
 - **Frontend:** A React-based user interface for uploading documents, viewing metadata, and deleting documents.
 - **Backend:** A FastAPI-based backend for handling document uploads, metadata extraction, and LLM integration.
-- **LLM Integration:** OpenAI's GPT API is used to categorize documents and generate summaries.
+- **LLM Integration:** Hugging Face's Inference API is used to categorize documents and generate summaries.
 - **AWS Deployment:** The backend is deployed using AWS Lambda, S3, and API Gateway. The frontend is hosted on AWS S3.
 
 ## Key Decisions
 
 1. **Frontend Framework:** React was chosen for its simplicity, flexibility, and rich ecosystem.
 2. **Backend Framework:** FastAPI was selected for its performance, ease of use, and built-in support for asynchronous operations.
-3. **LLM Integration:** OpenAI's GPT API was used for its state-of-the-art natural language processing capabilities.
+3. **LLM Integration:** Hugging Face's Inference API was used for its state-of-the-art natural language processing capabilities.
 4. **AWS Services:** AWS Lambda, S3, and API Gateway were chosen for their scalability, cost-effectiveness, and ease of integration.
 
-## Challenges and Solutions
+## Improvements and Fixes
 
-1. **File Upload Validation:** Ensuring only PDF and DOCX files are uploaded was achieved using FastAPI's file validation features.
-2. **CORS Configuration:** CORS issues were resolved by configuring the FastAPI backend to allow requests from the frontend.
-3. **LLM Integration:** Handling large document content and optimizing API calls were addressed by chunking content and caching results.
-4. **AWS Deployment:** Setting up IAM roles and permissions for Lambda and S3 required careful configuration and testing.
+- **CORS Configuration:** Properly configured CORS middleware to allow requests from the frontend.
+- **File Upload Handling:** Improved file upload handling for `.pdf` and `.docx` files using `PyPDF2` and `python-docx`.
+- **LLM Integration:** Switched to `google/flan-t5-large` for better instruction-following capabilities.
+- **Error Handling:** Added robust error handling for file uploads, text extraction, and LLM API responses.
+- **Dynamic Categorization:** The LLM now dynamically suggests category labels based on the document content.
+- **Improved Prompts:** Refined prompts for categorization and summarization to ensure the LLM responds with only the requested information.
 
 ## Setup Instructions
 
