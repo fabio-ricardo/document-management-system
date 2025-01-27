@@ -3,7 +3,7 @@
 
 2. Solution Design: The solution is to use existing traffic cameras integrated with edge devices, like Raspberry Pi or Arduino, to collect and preprocess real-time data, reducing the load on cloud resources. The devices will extract key metrics like vehicle count and queue length using computer vision, while the cloud system aggregates and analyzes this data to identify patterns and predict congestion. 
 
-A central algorithm adjusts traffic light timings dynamically, starting with simple rule-based logic (e.g., extending green lights for heavy traffic) and evolving into AI-driven optimization for predictive management. As a starting point, the usage of historical data could also be used to train the AI model, so the adaptation time is shorter. A dashboard allows city officials to monitor traffic, visualize issues, and manually override settings as needed. This approach balances cost, efficiency, and scalability.
+A central algorithm to traffic light timings dynamically, starting with simple rule-based logic (e.g., extending green lights for heavy traffic) and evolving into AI-driven optimization for predictive management. As a starting point, historical data could also be used to train the AI model, so the adaptation time is shorter. A dashboard allows city officials to monitor traffic, visualize issues, and manually override settings as needed. This approach balances cost, efficiency, and scalability.
 
 3. Prioritization: The focus should be on integrating cameras with edge devices and setting up a simple traffic light adjustment system. Preprocessing data locally minimizes cloud dependency, and a basic algorithm to adjust lights based on vehicle counts can deliver quick results. These steps provide immediate value while staying within budget.
 
