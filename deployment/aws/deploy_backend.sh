@@ -56,7 +56,7 @@ aws apigateway put-integration \
     --http-method POST \
     --type AWS_PROXY \
     --integration-http-method POST \
-    --uri "arn:aws:apigateway:$AWS_REGION:lambda:path/2015-03-31/functions/arn:aws:lambda:$AWS_REGION:<615299727823>:function:$LAMBDA_FUNCTION_NAME/invocations"
+    --uri "arn:aws:apigateway:$AWS_REGION:lambda:path/2015-03-31/functions/arn:aws:lambda:$AWS_REGION:615299727823:function:$LAMBDA_FUNCTION_NAME/invocations"  \
 
 echo "Deploying API Gateway..."
 aws apigateway create-deployment \
